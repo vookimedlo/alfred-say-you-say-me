@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>cz.vookimedlo.alfred.say</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>251016A1-5552-4968-886A-3386B37B8944</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8DB3EA16-BC62-47AD-A4CC-F1BABE32F277</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8DB3EA16-BC62-47AD-A4CC-F1BABE32F277</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5013CEA2-796A-4FC0-8D1C-F02E2AE7EA34</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B07FB92F-8DE1-4C95-B7DE-3CDDE399721D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>251016A1-5552-4968-886A-3386B37B8944</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Michal Duda</string>
+	<key>description</key>
+	<string>Alfred 3 workflow for saying a given text with a selected voice.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>SayYouSayMe</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"
+
+say -v $query "$textToSay"
+
+#echo -n $query</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8DB3EA16-BC62-47AD-A4CC-F1BABE32F277</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Please wait ...</string>
+				<key>script</key>
+				<string>#!/usr/bin/python
+
+import json
+import os
+import re
+import sys
+from subprocess import Popen, PIPE
+
+query = "{query}"
+
+try:
+    process = Popen(["say", "-v", "?"], stdout=PIPE)
+    (output, err) = process.communicate()
+    exitCode = process.wait()
+
+    if exitCode == 0:
+        alfreditems = {"items": []}
+        voicesPattern = re.compile("^([^ \t]+)[ \t]+([^ \t]+).+# (.+)")
+        output = output.split('\n')
+
+        for line in output:
+            results = voicesPattern.search(line)
+            if results:
+                # Alfred menu items
+                #
+                alfreditems['items'].append({
+                                            "mysortkey": results.group(2) + results.group(1),
+                                            "uid": results.group(2) + results.group(1),
+                                            "title": results.group(2) + ' - ' + results.group(1),
+                                            "subtitle": results.group(3),
+                                            "autocomplete": results.group(1),
+                                            "arg": results.group(1),
+                                            "variables": {
+                                                "textToSay": query
+                                                },
+                                            })
+        # Sort voices
+        #
+        lines = sorted(alfreditems['items'], key=lambda k: k['mysortkey'], reverse=False)
+        dump = json.dumps({'items': lines}, indent=4)
+        sys.stdout.write(dump)
+except:
+    pass
+</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Preparing voice selection</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>251016A1-5552-4968-886A-3386B37B8944</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>readonly latestTag=`curl -s https://api.github.com/repos/vookimedlo/alfred-say-you-say-me/releases/latest | grep browser_download_url | grep SayYouSayMe.alfredworkflow | cut -d '/' -f 8`
+
+# THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
+readonly remote_info_plist="https://raw.githubusercontent.com/vookimedlo/alfred-say-you-say-me/${latestTag}/src/info.plist"
+readonly workflow_url=`curl -s https://api.github.com/repos/vookimedlo/alfred-say-you-say-me/releases/latest | grep browser_download_url | grep SayYouSayMe.alfredworkflow | cut -d '"' -f 4`
+readonly download_type='direct'
+readonly frequency_check='4'
+
+# FROM HERE ON, CODE SHOULD BE LEFT UNTOUCHED!
+function abort {
+  echo "${1}" &gt;&amp;2
+  exit 1
+}
+
+function url_exists {
+  curl --silent --location --output /dev/null --fail --range 0-0 "${1}"
+}
+
+function notification {
+  readonly local notificator="$(find . -type d -name 'Notificator.app')"
+  if [[ -n "${notificator}" ]]; then
+    "${notificator}/Contents/Resources/Scripts/notificator" --message "${1}" --title "${alfred_workflow_name}" --subtitle 'A new version is available'
+    return
+  fi
+
+  readonly local terminal_notifier="$(find . -type f -name 'terminal-notifier')"
+  if [[ -n "${terminal_notifier}" ]]; then
+    "${terminal_notifier}" -title "${alfred_workflow_name}" -subtitle 'A new version is available' -message "${1}"
+    return
+  fi
+
+  osascript -e "display notification \"${1}\" with title \"${alfred_workflow_name}\" subtitle \"A new version is available\""
+}
+
+# Local sanity checks
+readonly local_info_plist='info.plist'
+readonly local_version="$(/usr/libexec/PlistBuddy -c 'print version' "${local_info_plist}")"
+
+[[ -n "${local_version}" ]] || abort 'You need to set a workflow version in the configuration sheet.'
+[[ "${download_type}" =~ ^(direct|page|github_release)$ ]] || abort "'download_type' (${download_type}) needs to be one of 'direct', 'page', or 'github_release'."
+[[ "${frequency_check}" =~ ^[0-9]+$ ]] || abort "'frequency_check' (${frequency_check}) needs to be a number."
+
+# Check for updates
+if [[ $(find "${local_info_plist}" -mtime +"${frequency_check}"d) ]]; then
+  if ! url_exists "${remote_info_plist}"; then abort "'remote_info_plist' (${remote_info_plist}) appears to not be reachable."; fi # Remote sanity check
+
+  readonly tmp_file="$(mktemp)"
+  curl --silent --location --output "${tmp_file}" "${remote_info_plist}"
+  readonly remote_version="$(/usr/libexec/PlistBuddy -c 'print version' "${tmp_file}")"
+
+  if [[ "${local_version}" == "${remote_version}" ]]; then
+    touch "${local_info_plist}" # Reset timer by touching local file
+    exit 0
+  fi
+
+  if [[ "${download_type}" == 'page' ]]; then
+    notification 'Opening download page…'
+    open "${workflow_url}"
+    exit 0
+  fi
+
+  download_url="$([[ "${download_type}" == 'github_release' ]] &amp;&amp; curl --silent "https://api.github.com/repos/${workflow_url}/releases/latest" | grep 'browser_download_url' | head -1 | sed -E 's/.*browser_download_url": "(.*)"/\1/' || echo "${workflow_url}")"
+
+  if url_exists "${download_url}"; then
+    notification 'Downloading and installing…'
+    curl --silent --location --output "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow" "${download_url}"
+    open "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow"
+  else
+    abort "'workflow_url' (${download_url}) appears to not be reachable."
+  fi
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5013CEA2-796A-4FC0-8D1C-F02E2AE7EA34</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>say</string>
+				<key>subtext</key>
+				<string>say your text</string>
+				<key>text</key>
+				<string>Say ...</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>B07FB92F-8DE1-4C95-B7DE-3CDDE399721D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>See https://github.com/vookimedlo/alfred-say-you-say-me
+
+Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</string>
+	<key>uidata</key>
+	<dict>
+		<key>251016A1-5552-4968-886A-3386B37B8944</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>note</key>
+			<string>SayYouSayMe - Voice selection</string>
+			<key>xpos</key>
+			<integer>310</integer>
+			<key>ypos</key>
+			<integer>280</integer>
+		</dict>
+		<key>5013CEA2-796A-4FC0-8D1C-F02E2AE7EA34</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>12</integer>
+			<key>note</key>
+			<string>OneUpdater</string>
+			<key>xpos</key>
+			<integer>730</integer>
+			<key>ypos</key>
+			<integer>280</integer>
+		</dict>
+		<key>8DB3EA16-BC62-47AD-A4CC-F1BABE32F277</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>note</key>
+			<string>SayYouSayMe - Say the text</string>
+			<key>xpos</key>
+			<integer>520</integer>
+			<key>ypos</key>
+			<integer>280</integer>
+		</dict>
+		<key>B07FB92F-8DE1-4C95-B7DE-3CDDE399721D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>note</key>
+			<string>SayYouSayMe</string>
+			<key>xpos</key>
+			<integer>110</integer>
+			<key>ypos</key>
+			<integer>280</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>2018.03.XX</string>
+	<key>webaddress</key>
+	<string>https://github.com/vookimedlo/alfred-say-you-say-me</string>
+</dict>
+</plist>
