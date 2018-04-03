@@ -29,7 +29,7 @@ Then, select a voice and your text will be spoken. Voices are sorted by their lo
 -------------------
 
 Have too many voices for a selection is pretty useless, so you can configure the language filter in a workflow configuration.
-Fill all required locales in `language_filter` variable. Filter is case insensitive and is a regular expression. If you don't know what the regular expression is, just put there all locales divided by pipe symbol `|`. See the screenshot below.
+Fill all required locales in `language_filter` variable. Filter is case insensitive and is a regular expression. If you don't know what the regular expression is, just put there all locales divided by the pipe symbol `|`. See the screenshot below.
 
 ![Alfred workflow configuration screenshot](doc/images/alfred-sayyousayme-screenshot_2018-04-03_20.51.32.png?raw=true "")
 
