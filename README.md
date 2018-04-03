@@ -26,6 +26,8 @@ Then, select a voice and your text will be spoken. Voices are sorted by their lo
 
 ![Alfred voice menu screenshot](doc/images/alfred-sayyousayme-screenshot_2018-04-03_20.51.01.png?raw=true "")
 
+If you press <kbd>⌘</kbd> during a voice selection, spoken text will be saved in a file stored in your `Desktop` directory.
+
 -------------------
 
 Have too many voices for a selection is pretty useless, so you can configure the language filter in a workflow configuration.
