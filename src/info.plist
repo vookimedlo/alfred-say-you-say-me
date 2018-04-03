@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>5013CEA2-796A-4FC0-8D1C-F02E2AE7EA34</string>
+				<string>B31AF646-A7C1-4118-A090-4F838EB4D468</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -22,7 +22,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>B815198D-557A-458F-BE8D-70C97171F7E2</string>
+				<string>3764F480-DFDD-4516-BD13-DBC69E6E1B76</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -54,11 +54,37 @@
 				<false/>
 			</dict>
 		</array>
+		<key>30C7BBC8-2A8F-47B8-A5D8-99EEC54DA423</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3A348DA1-BA4B-4766-B9D7-69B68966368C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>35AEE699-EA64-4B28-8897-3B78E22EA86C</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>904CC772-A9E5-4D42-B3C2-E8EFF94FEA17</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3764F480-DFDD-4516-BD13-DBC69E6E1B76</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B815198D-557A-458F-BE8D-70C97171F7E2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -94,7 +120,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>5013CEA2-796A-4FC0-8D1C-F02E2AE7EA34</string>
+				<string>B31AF646-A7C1-4118-A090-4F838EB4D468</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -104,7 +130,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>B815198D-557A-458F-BE8D-70C97171F7E2</string>
+				<string>3764F480-DFDD-4516-BD13-DBC69E6E1B76</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -117,7 +143,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>5013CEA2-796A-4FC0-8D1C-F02E2AE7EA34</string>
+				<string>B31AF646-A7C1-4118-A090-4F838EB4D468</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -152,8 +178,31 @@
 				<false/>
 			</dict>
 		</array>
+		<key>B31AF646-A7C1-4118-A090-4F838EB4D468</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5013CEA2-796A-4FC0-8D1C-F02E2AE7EA34</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C61B636C-6879-4B0D-907D-205112CB131E</key>
 		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C4F98C34-BF1A-48FA-AF89-6758BFDCF121</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>69751D7C-3A43-4005-BA9D-AB3AA3DEFADF</string>
@@ -164,9 +213,12 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>DEF2796B-986D-4FCC-9DD4-EE2A73EED618</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>9F907455-F8BE-42B8-BC0A-4068B6259BD0</string>
+				<string>30C7BBC8-2A8F-47B8-A5D8-99EEC54DA423</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -254,6 +306,64 @@ python voiceSelection.py "$query"
 			<string>B07FB92F-8DE1-4C95-B7DE-3CDDE399721D</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>readonly query="{query}"
+
+say -v $query "$textToSay"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8DB3EA16-BC62-47AD-A4CC-F1BABE32F277</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>readonly query="{query}"
+readonly filename=`date '+speech_%Y-%m-%d_%H-%M-%S.m4a'`
+readonly tmpdirpath=`mktemp -d`
+readonly tmpfilenamepath="$tmpdirpath/$filename"
+readonly filenamepath="$HOME/Desktop/$filename"
+
+ps ax | grep 'SpeechSynthesis.framework/Resources/com.apple.speech.speechsynthesisd' | grep -v grep | sed 's/^ *//' | cut -d' ' -f1 | while read line; do kill $line 2&gt;/dev/null; done
+
+say -v $query -o "$tmpfilenamepath" --data-format=alac "$textToSay"
+mv -f "$tmpfilenamepath" "$filenamepath"
+echo -n "$filename"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>19BFD9F5-CA34-4692-B87C-2066ABA193A0</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -349,62 +459,6 @@ fi</string>
 			<integer>2</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>readonly query="{query}"
-
-say -v $query "$textToSay"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>8DB3EA16-BC62-47AD-A4CC-F1BABE32F277</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>readonly query="{query}"
-readonly filename=`date '+speech_%Y-%m-%d_%H-%M-%S.m4a'`
-readonly tmpdirpath=`mktemp -d`
-readonly tmpfilenamepath="$tmpdirpath/$filename"
-readonly filenamepath="$HOME/Desktop/$filename"
-
-say -v $query -o "$tmpfilenamepath" --data-format=alac "$textToSay"
-mv -f "$tmpfilenamepath" "$filenamepath"
-echo -n "$filename"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>19BFD9F5-CA34-4692-B87C-2066ABA193A0</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
@@ -413,23 +467,10 @@ echo -n "$filename"</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<true/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>check your home directory for {query}</string>
-				<key>title</key>
-				<string>Your audio file is ready.</string>
-			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
-			<string>B815198D-557A-458F-BE8D-70C97171F7E2</string>
+			<string>B31AF646-A7C1-4118-A090-4F838EB4D468</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -538,6 +579,27 @@ echo -n "$filename"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<true/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>check your home directory for {query}</string>
+				<key>title</key>
+				<string>Your audio file is ready.</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>B815198D-557A-458F-BE8D-70C97171F7E2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>acceptsmulti</key>
 				<false/>
 				<key>filetypes</key>
@@ -556,6 +618,14 @@ echo -n "$filename"</string>
 			<key>type</key>
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
+			<string>3764F480-DFDD-4516-BD13-DBC69E6E1B76</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
 			<string>C61B636C-6879-4B0D-907D-205112CB131E</string>
 			<key>version</key>
 			<integer>1</integer>
@@ -563,21 +633,65 @@ echo -n "$filename"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>.say-unstuck</string>
+				<key>subtext</key>
+				<string>Kills stucked com.apple.speech.speechsynthesisd</string>
+				<key>text</key>
+				<string>Kill a speech synthesis daemon</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>DEF2796B-986D-4FCC-9DD4-EE2A73EED618</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>ps ax | grep 'SpeechSynthesis.framework/Resources/com.apple.speech.speechsynthesisd' | grep -v grep | sed 's/^ *//' | cut -d' ' -f1 | while read line; do kill $line 2&gt;/dev/null; done</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>30C7BBC8-2A8F-47B8-A5D8-99EEC54DA423</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
-				<true/>
+				<false/>
 				<key>onlyshowifquerypopulated</key>
-				<true/>
+				<false/>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Please, wait!</string>
+				<string>... was probably unstucked</string>
 				<key>title</key>
-				<string>Your audio file is being created.</string>
+				<string>Speech daemon</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>9F907455-F8BE-42B8-BC0A-4068B6259BD0</string>
+			<string>3A348DA1-BA4B-4766-B9D7-69B68966368C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -595,9 +709,9 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 			<key>note</key>
 			<string>SayYouSayMe - Say the text to file</string>
 			<key>xpos</key>
-			<integer>720</integer>
+			<integer>660</integer>
 			<key>ypos</key>
-			<integer>300</integer>
+			<integer>170</integer>
 		</dict>
 		<key>251016A1-5552-4968-886A-3386B37B8944</key>
 		<dict>
@@ -606,9 +720,20 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 			<key>note</key>
 			<string>SayYouSayMe - Voice selection</string>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>210</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>10</integer>
+		</dict>
+		<key>30C7BBC8-2A8F-47B8-A5D8-99EEC54DA423</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>note</key>
+			<string>SayYouSayMe - Say the text to file</string>
+			<key>xpos</key>
+			<integer>660</integer>
+			<key>ypos</key>
+			<integer>550</integer>
 		</dict>
 		<key>35AEE699-EA64-4B28-8897-3B78E22EA86C</key>
 		<dict>
@@ -617,9 +742,29 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 			<key>note</key>
 			<string>SayYouSayMe - Read file</string>
 			<key>xpos</key>
-			<integer>100</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>510</integer>
+			<integer>380</integer>
+		</dict>
+		<key>3764F480-DFDD-4516-BD13-DBC69E6E1B76</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>xpos</key>
+			<integer>880</integer>
+			<key>ypos</key>
+			<integer>410</integer>
+		</dict>
+		<key>3A348DA1-BA4B-4766-B9D7-69B68966368C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>note</key>
+			<string>SayYouSayMe - Unstuck Done</string>
+			<key>xpos</key>
+			<integer>970</integer>
+			<key>ypos</key>
+			<integer>550</integer>
 		</dict>
 		<key>5013CEA2-796A-4FC0-8D1C-F02E2AE7EA34</key>
 		<dict>
@@ -628,16 +773,18 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 			<key>note</key>
 			<string>OneUpdater</string>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>970</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>170</integer>
 		</dict>
 		<key>52319687-6FBE-4FAB-B7E4-33CBDFC10B30</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
 			<key>xpos</key>
-			<integer>460</integer>
+			<integer>400</integer>
 			<key>ypos</key>
-			<integer>330</integer>
+			<integer>200</integer>
 		</dict>
 		<key>69751D7C-3A43-4005-BA9D-AB3AA3DEFADF</key>
 		<dict>
@@ -646,9 +793,9 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 			<key>note</key>
 			<string>SayYouSayMe - Say the text to file</string>
 			<key>xpos</key>
-			<integer>720</integer>
+			<integer>660</integer>
 			<key>ypos</key>
-			<integer>510</integer>
+			<integer>380</integer>
 		</dict>
 		<key>8DB3EA16-BC62-47AD-A4CC-F1BABE32F277</key>
 		<dict>
@@ -657,9 +804,9 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 			<key>note</key>
 			<string>SayYouSayMe - Say the text</string>
 			<key>xpos</key>
-			<integer>720</integer>
+			<integer>660</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>10</integer>
 		</dict>
 		<key>904CC772-A9E5-4D42-B3C2-E8EFF94FEA17</key>
 		<dict>
@@ -668,20 +815,9 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 			<key>note</key>
 			<string>SayYouSayMe - Voice selection</string>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>210</integer>
 			<key>ypos</key>
-			<integer>510</integer>
-		</dict>
-		<key>9F907455-F8BE-42B8-BC0A-4068B6259BD0</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>note</key>
-			<string>SayYouSayMe - Please wait</string>
-			<key>xpos</key>
-			<integer>570</integer>
-			<key>ypos</key>
-			<integer>720</integer>
+			<integer>380</integer>
 		</dict>
 		<key>B07FB92F-8DE1-4C95-B7DE-3CDDE399721D</key>
 		<dict>
@@ -690,18 +826,29 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 			<key>note</key>
 			<string>SayYouSayMe - Say give text</string>
 			<key>xpos</key>
-			<integer>100</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>10</integer>
+		</dict>
+		<key>B31AF646-A7C1-4118-A090-4F838EB4D468</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>xpos</key>
+			<integer>880</integer>
+			<key>ypos</key>
+			<integer>200</integer>
 		</dict>
 		<key>B815198D-557A-458F-BE8D-70C97171F7E2</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>5</integer>
+			<key>note</key>
+			<string>SayYouSayMe - Done</string>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>970</integer>
 			<key>ypos</key>
-			<integer>420</integer>
+			<integer>380</integer>
 		</dict>
 		<key>C4F98C34-BF1A-48FA-AF89-6758BFDCF121</key>
 		<dict>
@@ -710,20 +857,35 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 			<key>note</key>
 			<string>SayYouSayMe - Please wait</string>
 			<key>xpos</key>
-			<integer>570</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>420</integer>
+			<integer>280</integer>
 		</dict>
 		<key>C61B636C-6879-4B0D-907D-205112CB131E</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
 			<key>xpos</key>
-			<integer>460</integer>
+			<integer>400</integer>
 			<key>ypos</key>
-			<integer>540</integer>
+			<integer>410</integer>
+		</dict>
+		<key>DEF2796B-986D-4FCC-9DD4-EE2A73EED618</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>note</key>
+			<string>SayYouSayMe - Unstuck speech daemon</string>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>550</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
 	<dict>
+		<key>buggy_voices_filter</key>
+		<string>alex</string>
 		<key>language_filter</key>
 		<string></string>
 	</dict>
@@ -732,7 +894,7 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 		<string>language_filter</string>
 	</array>
 	<key>version</key>
-	<string>2018.03.XX</string>
+	<string>2018.04.03</string>
 	<key>webaddress</key>
 	<string>https://github.com/vookimedlo/alfred-say-you-say-me</string>
 </dict>

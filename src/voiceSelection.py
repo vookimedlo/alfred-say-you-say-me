@@ -10,6 +10,9 @@ import re
 import sys
 from subprocess import Popen, PIPE
 
+buggyVoicesFilter = os.environ['buggy_voices_filter']
+buggyVoicesFilterRE = re.compile(buggyVoicesFilter, re.I)
+
 langFilter = os.environ['language_filter']
 langFilterRE = re.compile(langFilter, re.I)
 
@@ -32,7 +35,12 @@ try:
                 #
                 if not langFilterRE.search(results.group(2)):
                     continue
-            
+
+                # Filter out buggy voices
+                #
+                if buggyVoicesFilter != "" and buggyVoicesFilterRE.search(results.group(1)):
+                    continue
+
                 # Alfred menu items
                 #
                 alfreditems['items'].append({
