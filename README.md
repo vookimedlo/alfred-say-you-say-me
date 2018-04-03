@@ -39,6 +39,9 @@ Then, you will see just voices which your languages support.
 
 There is another variable you could set. It's a `buggy_voices_filter` variable, which contains a list of buggy voices. Currently, there is a [problem][3] in the Apple Synthetisation Daemon and some voices can stuck it. At the moment, only the `en_us - Alex` voice is added there. Again, list is a regular expression.
 
+Stuck deamon could be unstucked by typing `.say-unstuck` in Alfred.
+
+![Alfred actions screenshot](doc/images/alfred-sayyousayme-screenshot_2018-04-03_20.52.36.png?raw=true "")
 
 [1]: https://www.alfredapp.com/
 [2]: https://github.com/vookimedlo/alfred-say-you-say-me/releases/latest
