@@ -22,7 +22,7 @@ Alternativelly, you can pass the text you want to hear to this workflow. In Alfr
 
 ![Alfred menu screenshot](doc/images/alfred-sayyousayme-screenshot_2018-04-03_20.49.18.png?raw=true "")
 
-Then, select a voice and your text will be spoken.
+Then, select a voice and your text will be spoken. Voices are sorted by locale and previously selected voices are prioritized. Notice that the each voice in a menu contains it's locale, name and a localized voice introduction.
 
 ![Alfred voice menu screenshot](doc/images/alfred-sayyousayme-screenshot_2018-04-03_20.51.01.png?raw=true "")
 
