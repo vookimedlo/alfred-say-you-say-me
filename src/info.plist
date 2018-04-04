@@ -603,7 +603,9 @@ echo -n "$filename"</string>
 				<key>acceptsmulti</key>
 				<false/>
 				<key>filetypes</key>
-				<array/>
+				<array>
+					<string>+public.plain-text</string>
+				</array>
 				<key>name</key>
 				<string>Say...</string>
 			</dict>
