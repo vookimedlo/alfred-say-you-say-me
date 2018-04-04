@@ -294,7 +294,7 @@ python voiceSelection.py "$query"
 				<key>keyword</key>
 				<string>say</string>
 				<key>subtext</key>
-				<string>say your text</string>
+				<string>says your text</string>
 				<key>text</key>
 				<string>Say ...</string>
 				<key>withspace</key>
@@ -636,9 +636,9 @@ echo -n "$filename"</string>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>.say-unstuck</string>
+				<string>.say-unstick</string>
 				<key>subtext</key>
-				<string>Kills stucked com.apple.speech.speechsynthesisd</string>
+				<string>Kills a stuck com.apple.speech.speechsynthesisd</string>
 				<key>text</key>
 				<string>Kill a speech synthesis daemon</string>
 				<key>withspace</key>
@@ -684,7 +684,7 @@ echo -n "$filename"</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>... was probably unstucked</string>
+				<string>... was probably unstuck</string>
 				<key>title</key>
 				<string>Speech daemon</string>
 			</dict>
@@ -729,7 +729,7 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>note</key>
-			<string>SayYouSayMe - Say the text to file</string>
+			<string>SayYouSayMe - kills daemon</string>
 			<key>xpos</key>
 			<integer>660</integer>
 			<key>ypos</key>
@@ -760,7 +760,7 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>note</key>
-			<string>SayYouSayMe - Unstuck Done</string>
+			<string>SayYouSayMe - Unstick Done</string>
 			<key>xpos</key>
 			<integer>970</integer>
 			<key>ypos</key>
@@ -824,7 +824,7 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>note</key>
-			<string>SayYouSayMe - Say give text</string>
+			<string>SayYouSayMe - Say given text</string>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
@@ -894,7 +894,7 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 		<string>language_filter</string>
 	</array>
 	<key>version</key>
-	<string>2018.04.03</string>
+	<string>2018.04.04</string>
 	<key>webaddress</key>
 	<string>https://github.com/vookimedlo/alfred-say-you-say-me</string>
 </dict>
