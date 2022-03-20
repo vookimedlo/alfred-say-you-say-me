@@ -245,6 +245,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -264,7 +266,7 @@
 				<key>script</key>
 				<string>readonly query="{query}"
 
-python voiceSelection.py "$query"
+python3 voiceSelection.py "$query"
 </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -284,7 +286,7 @@ python voiceSelection.py "$query"
 			<key>uid</key>
 			<string>251016A1-5552-4968-886A-3386B37B8944</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -502,6 +504,8 @@ fi</string>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -521,7 +525,7 @@ fi</string>
 				<key>script</key>
 				<string>readonly query="{query}"
 
-python voiceSelection.py "$query"
+python3 voiceSelection.py "$query"
 </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -541,7 +545,7 @@ python voiceSelection.py "$query"
 			<key>uid</key>
 			<string>904CC772-A9E5-4D42-B3C2-E8EFF94FEA17</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -601,7 +605,7 @@ echo -n "$filename"</string>
 			<key>config</key>
 			<dict>
 				<key>acceptsmulti</key>
-				<false/>
+				<integer>0</integer>
 				<key>filetypes</key>
 				<array>
 					<string>+public.plain-text</string>
@@ -896,7 +900,7 @@ Icons taken from https://openclipart.org/detail/298688/silly-face-icon-umber</st
 		<string>language_filter</string>
 	</array>
 	<key>version</key>
-	<string>2018.04.04</string>
+	<string>2022.02.20</string>
 	<key>webaddress</key>
 	<string>https://github.com/vookimedlo/alfred-say-you-say-me</string>
 </dict>

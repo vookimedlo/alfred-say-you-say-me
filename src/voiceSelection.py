@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/opt/homebrew/bin/python3
 # Author: Michal Duda
 # License: GPLv3
 # WWW: https://github.com/vookimedlo/alfred-say-you-say-me
@@ -26,7 +26,7 @@ try:
     if exitCode == 0:
         alfreditems = {"items": []}
         voicesPattern = re.compile("^([^ \t]+)[ \t]+([^ \t]+).+# (.+)")
-        output = output.split('\n')
+        output = output.decode('utf-8').split('\n')
         
         for line in output:
             results = voicesPattern.search(line)
