@@ -5,6 +5,8 @@
 
 1) Install [alfred-say-you-say-me workflow.][2]
 2) All further updates are handled automatically.
+3) Requires a _python3_ interpreter to be installed via a [Homebrew][4].
+
 
 ## Usage
 
@@ -48,4 +50,5 @@ Stuck daemon could be unstuck by typing `.say-unstick` in Alfred.
 [1]: https://www.alfredapp.com/
 [2]: https://github.com/vookimedlo/alfred-say-you-say-me/releases/latest
 [3]: https://www.applevis.com/forum/macos-mac-app-discussion/problem-using-spoken-track-service
+[4]: https://brew.sh/
 
